@@ -10,5 +10,21 @@ workflows:
       - maven/test :
           #https://stackoverflow.com/questions/65602920/circleci-maven-build-fails-missing-pom-xml
           app_src_directory: autoMerge
-      
-       
+
+
+
+      #https://circleci.com/docs/2.0/using-shell-scripts/   
+      shellcheck:
+        docker:
+          - image: koalaman/shellcheck-alpine:stable
+            auth:
+              username: mydockerhub-user
+              password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+        steps:
+          - checkout
+          - run:
+              name: Check Scripts
+              command: |
+                find . -type f -name '*.sh' | wc -l
+                find . -type f -name '*.sh' | xargs shellcheck --external-sources
+ 
