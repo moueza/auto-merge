@@ -13,9 +13,9 @@ workflows:
 
 
 
-        
-      #https://circleci.com/docs/2.0/using-shell-scripts/ 
-      #https://circleci.com/docs/2.0/hello-world/
+      build:  
+        #https://circleci.com/docs/2.0/using-shell-scripts/ 
+        #https://circleci.com/docs/2.0/hello-world/
 
-      - checkout # check out the code in the project directory
-      - run: echo "hello world" # run the `echo` command
+        - checkout # check out the code in the project directory
+        - run: echo "hello world" # run the `echo` command
