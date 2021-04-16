@@ -10,7 +10,8 @@ jobs:
   #- maven/test :
       #https://stackoverflow.com/questions/65602920/circleci-maven-build-fails-missing-pom-xml
       #app_src_directory: autoMerge
-  - build:          
+  #- build: 
+  build         
       #docker:
         #- image: alpine:3.7
         # - image: circleci/node:<< pipeline.parameters.image-tag >>
