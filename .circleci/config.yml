@@ -5,31 +5,28 @@ orbs:
 
 #workflows:
   #maven_test:
-    jobs:
-      #- cd spring-autowired-npe/ && maven/test
-      - maven/test :
-          #https://stackoverflow.com/questions/65602920/circleci-maven-build-fails-missing-pom-xml
-          app_src_directory: autoMerge
-
-
-
-      - build:  
-          machine: true       
-          #docker:
-            # - image: circleci/node:<< pipeline.parameters.image-tag >>
-              # auth:
-                # username: mydockerhub-user
-                # password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-          #environment:
-            #IMAGETAG: << pipeline.parameters.image-tag >>
-          #working_directory: << pipeline.parameters.workingdir >>
-          steps:
-            #- run: echo "Image tag used was ${IMAGETAG}"
-            #- run: echo "$(pwd) == << pipeline.parameters.workingdir >>"
-            - run: echo "lbl29 OK""
-            #https://circleci.com/docs/2.0/using-shell-scripts/ 
-            #https://circleci.com/docs/2.0/hello-world/
-          
-            #- checkout # check out the code in the project directory
-            #- run: echo "hello world" # run the `echo` command
-          
+jobs:
+  #- cd spring-autowired-npe/ && maven/test
+  - maven/test :
+      #https://stackoverflow.com/questions/65602920/circleci-maven-build-fails-missing-pom-xml
+      app_src_directory: autoMerge
+  - build:  
+      machine: true       
+      #docker:
+        # - image: circleci/node:<< pipeline.parameters.image-tag >>
+          # auth:
+            # username: mydockerhub-user
+            # password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+      #environment:
+        #IMAGETAG: << pipeline.parameters.image-tag >>
+      #working_directory: << pipeline.parameters.workingdir >>
+      steps:
+        #- run: echo "Image tag used was ${IMAGETAG}"
+        #- run: echo "$(pwd) == << pipeline.parameters.workingdir >>"
+        - run: echo "lbl29 OK""
+        #https://circleci.com/docs/2.0/using-shell-scripts/ 
+        #https://circleci.com/docs/2.0/hello-world/
+      
+        #- checkout # check out the code in the project directory
+        #- run: echo "hello world" # run the `echo` command
+      
