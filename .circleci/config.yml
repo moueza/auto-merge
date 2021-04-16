@@ -23,7 +23,8 @@ jobs:
       steps:
         #- run: echo "Image tag used was ${IMAGETAG}"
         #- run: echo "$(pwd) == << pipeline.parameters.workingdir >>"
-        - run: echo "lbl29 OK""
+        #- run: echo "lbl29 OK""
+        echo "lbl31 OK"
         #https://circleci.com/docs/2.0/using-shell-scripts/ 
         #https://circleci.com/docs/2.0/hello-world/
       
