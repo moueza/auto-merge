@@ -13,8 +13,7 @@ workflows:
 
 
 
-      build:  
-          
+      build:         
                 docker:
                   - image: circleci/node:<< pipeline.parameters.image-tag >>
                     auth:
