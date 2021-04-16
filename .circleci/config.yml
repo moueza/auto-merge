@@ -10,9 +10,8 @@ jobs:
   - maven/test :
       #https://stackoverflow.com/questions/65602920/circleci-maven-build-fails-missing-pom-xml
       app_src_directory: autoMerge
-  - build:  
-      machine: true       
-      #docker:
+  - build:          
+      docker:
         # - image: circleci/node:<< pipeline.parameters.image-tag >>
           # auth:
             # username: mydockerhub-user
@@ -24,6 +23,7 @@ jobs:
         #- run: echo "Image tag used was ${IMAGETAG}"
         #- run: echo "$(pwd) == << pipeline.parameters.workingdir >>"
         #- run: echo "lbl29 OK""
+        command
         echo "lbl31 OK"
         #https://circleci.com/docs/2.0/using-shell-scripts/ 
         #https://circleci.com/docs/2.0/hello-world/
