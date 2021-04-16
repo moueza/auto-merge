@@ -24,9 +24,9 @@ workflows:
             #IMAGETAG: << pipeline.parameters.image-tag >>
           #working_directory: << pipeline.parameters.workingdir >>
           steps:
-            - run: echo "Image tag used was ${IMAGETAG}"
-            - run: echo "$(pwd) == << pipeline.parameters.workingdir >>"
-          
+            #- run: echo "Image tag used was ${IMAGETAG}"
+            #- run: echo "$(pwd) == << pipeline.parameters.workingdir >>"
+            - run: echo "lbl29 OK""
             #https://circleci.com/docs/2.0/using-shell-scripts/ 
             #https://circleci.com/docs/2.0/hello-world/
           
