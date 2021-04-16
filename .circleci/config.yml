@@ -3,8 +3,8 @@ version: 2.1
 orbs:
   maven: circleci/maven@1.1
 
-workflows:
-  maven_test:
+#workflows:
+  #maven_test:
     jobs:
       #- cd spring-autowired-npe/ && maven/test
       - maven/test :
