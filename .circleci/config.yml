@@ -24,7 +24,7 @@ jobs:
         #- run: echo "Image tag used was ${IMAGETAG}"
         #- run: echo "$(pwd) == << pipeline.parameters.workingdir >>"
         #- run: echo "lbl29 OK""
-        -  checkout
+        - checkout
         #command
         #- run: echo "lbl31 OK"
         # - run:
