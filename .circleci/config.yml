@@ -20,11 +20,11 @@ jobs:
       #environment:
         #IMAGETAG: << pipeline.parameters.image-tag >>
       #working_directory: << pipeline.parameters.workingdir >>
-      steps:
+      #steps:
         #- run: echo "Image tag used was ${IMAGETAG}"
         #- run: echo "$(pwd) == << pipeline.parameters.workingdir >>"
         #- run: echo "lbl29 OK""
-        #- checkout
+        #                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           - checkout
         #command
         #- run: echo "lbl31 OK"
         # - run:
