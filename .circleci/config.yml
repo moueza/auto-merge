@@ -26,7 +26,11 @@ jobs:
         #- run: echo "lbl29 OK""
         -  checkout
         #command
-        - run: echo "lbl31 OK"
+        #- run: echo "lbl31 OK"
+        - run:
+            name: runny
+            command: echo "lbl31 OK"
+
         #https://circleci.com/docs/2.0/using-shell-scripts/ 
         #https://circleci.com/docs/2.0/hello-world/
       
