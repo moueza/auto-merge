@@ -19,9 +19,9 @@ workflows:
                     auth:
                       username: mydockerhub-user
                       password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-                environment:
-                  IMAGETAG: << pipeline.parameters.image-tag >>
-                working_directory: << pipeline.parameters.workingdir >>
+                #environment:
+                  #IMAGETAG: << pipeline.parameters.image-tag >>
+                #working_directory: << pipeline.parameters.workingdir >>
                 steps:
                   - run: echo "Image tag used was ${IMAGETAG}"
                   - run: echo "$(pwd) == << pipeline.parameters.workingdir >>"
