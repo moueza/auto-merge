@@ -14,7 +14,7 @@ workflows:
 
 
   build:  
-      jobs:
+      
             docker:
               - image: circleci/node:<< pipeline.parameters.image-tag >>
                 auth:
@@ -27,8 +27,8 @@ workflows:
               - run: echo "Image tag used was ${IMAGETAG}"
               - run: echo "$(pwd) == << pipeline.parameters.workingdir >>"
 
-            #https://circleci.com/docs/2.0/using-shell-scripts/ 
-            #https://circleci.com/docs/2.0/hello-world/
+              #https://circleci.com/docs/2.0/using-shell-scripts/ 
+              #https://circleci.com/docs/2.0/hello-world/
 
-            #- checkout # check out the code in the project directory
-            #- run: echo "hello world" # run the `echo` command
+              #- checkout # check out the code in the project directory
+              #- run: echo "hello world" # run the `echo` command
