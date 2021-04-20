@@ -33,8 +33,12 @@ jobs:
   #- build: 
    
  
-    build-with-docker:
+    build-with-dockerJ:
         executor: docker-executor
         steps:
             - buildyls
-      
+      #or TODO build jobs
+workflows:
+  build-with-dockerW:
+    jobs:
+      - build-with-dockerJ
